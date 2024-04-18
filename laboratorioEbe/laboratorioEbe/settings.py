@@ -56,7 +56,7 @@ ROOT_URLCONF = 'laboratorioEbe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,10 +75,22 @@ WSGI_APPLICATION = 'laboratorioEbe.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}'''
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'laboratorioEbe',
+        'USER': 'root',
+        'PASSWORD': 'Laboratorio123',
+        'HOST': 'localhost',  # O una dirección IP si la BD no está en el servidor local
+        'PORT': '3306',  # El puerto predeterminado para MySQL es el 3306
     }
 }
 
@@ -128,3 +140,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'front.Usuario'
+
