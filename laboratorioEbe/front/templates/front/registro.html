@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-
-<head>
-    {% load static %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Focus - Bootstrap Admin Dashboard </title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
-</head>
+{% extends "front/menu.html" %}
+ 
+ 
+{% block content %}
 
 <body class="h-100">
     <div class="authincation h-100">
@@ -22,29 +12,26 @@
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-                                    <h4 class="text-center mb-4">Iniciar sesión</h4>
-                                    <form action="">
+                                    <h4 class="text-center mb-4">Registro de Usuario</h4>
+                                    <form action="index.html">
+                                        <div class="form-group">
+                                            <label><strong>Nombre</strong></label>
+                                            <input type="text" class="form-control" placeholder="username">
+                                        </div>
                                         <div class="form-group">
                                             <label><strong>Email</strong></label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control" placeholder="hello@example.com">
                                         </div>
                                         <div class="form-group">
                                             <label><strong>Contraseña</strong></label>
-                                            <input type="password" class="form-control">
-                                        </div>
-                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                            
-                                            <div class="form-group">
-                                                <a href="">¿Olvidaste tu contraseña?</a>
-                                            </div>
+                                            <input type="password" class="form-control" value="Password">
                                         </div>
                                         <div class="text-center">
-                                            <a href="{% url 'menu' %}" class="btn btn-primary btn-block">Iniciar sesión</a>
+                                            <a href="{% url 'menu' %}" class="btn btn-primary btn-block">Registrar</a>
                                         </div>
-                                        
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>¿No tienes una cuenta? <a class="text-primary" href="{% url 'registro' %}">Regístrate</a></p>
+                                        <p>Ya tienes cuenta? <a class="text-primary" href="{% url 'login' %}">Inicio de sesion</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -65,16 +52,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

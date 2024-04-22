@@ -17,7 +17,6 @@
 </head>
  
 <body>
- 
     <!-- Preloader start -->
     <div id="preloader">
         <div class="sk-three-bounce">
@@ -88,10 +87,10 @@
                     <li>
                         <a class="has-arrow" href="" aria-expanded="false">
                             <i class="icon icon-single-04"></i>
-                            <span class="nav-text">Accesos</span>
+                            <span class="nav-text">Gestin de Perfiles</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="">Accesos 1</a></li>
+                            <li><a href="">Editar Perfil</a></li>
                             <li><a href="">Accesos 2</a></li>
                         </ul>
                     </li>
@@ -151,8 +150,8 @@
                             <span class="nav-text">Soporte</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="">Register</a></li>
-                            <li><a href="">Login</a></li>
+                            <li><a href="{% url 'GPerfil' %"}>Register</a></li>
+                            <li><a href="{% url 'cuadro' %}">Login</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -169,6 +168,8 @@
         </section>
    
     </div>
+
+
     <!--**********************************
             Parte inferior
         ***********************************-->
