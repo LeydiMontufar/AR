@@ -19,7 +19,18 @@ def cuadro(request):
 def registro(request):
     context = {}
     return render(request, 'front/registro.html', context)
-def gPerfil(request):
+def mPerfil(request):
     context = {}
-    return render(request, 'front/GPerfil.html', context)
-
+    return render(request, 'front/mPerfil.html', context)
+def editarPerfil(request):
+    context = {}
+    return render(request, 'front/editarPerfil.html', context)
+def infSimulacion(request):
+    context = {}
+    return render(request, 'front/infSimulacion.html', context)
+def infEjecucion(request):
+    context = {}
+    return render(request, 'front/infEjecucion.html', context)
+def herAnotacion(request):
+    context = {}
+    return render(request, 'front/herAnotacion.html', context)
