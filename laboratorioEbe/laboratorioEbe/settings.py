@@ -83,12 +83,13 @@ WSGI_APPLICATION = 'laboratorioEbe.wsgi.application'
 }'''
 
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'laboratorioEbe',
         'USER': 'root',
-        'PASSWORD': 'Laboratorio123',
+        'PASSWORD': '123456789',
         'HOST': 'localhost',  # O una dirección IP si la BD no está en el servidor local
         'PORT': '3306',  # El puerto predeterminado para MySQL es el 3306
     }
