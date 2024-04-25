@@ -11,13 +11,18 @@ import numpy as np
 
 # Create your views here.
 #imprime un txto html
-def index(request):
-    template = loader.get_template("front/menu.html")
+def login(request):
+    template = loader.get_template("front/login.html")
     context = {}
     return HttpResponse(template.render(context,request))
+def menu(request):
+    context = {}
+    return render(request, 'front/menu.html', context)
+
 def cuadro(request):
    
     return render(request, 'front/cuadro_formulario.html', context)
+
 
 
 def ejecutar_ca(request):
@@ -133,3 +138,23 @@ def video_stream():
 def video_feed(request):
     return StreamingHttpResponse(video_stream(),
                                  content_type='multipart/x-mixed-replace; boundary=frame')
+
+def registro(request):
+    context = {}
+    return render(request, 'front/registro.html', context)
+def mPerfil(request):
+    context = {}
+    return render(request, 'front/mPerfil.html', context)
+def editarPerfil(request):
+    context = {}
+    return render(request, 'front/editarPerfil.html', context)
+def infSimulacion(request):
+    context = {}
+    return render(request, 'front/infSimulacion.html', context)
+def infEjecucion(request):
+    context = {}
+    return render(request, 'front/infEjecucion.html', context)
+def herAnotacion(request):
+    context = {}
+    return render(request, 'front/herAnotacion.html', context)
+
